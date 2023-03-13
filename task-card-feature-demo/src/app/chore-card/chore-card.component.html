@@ -1,0 +1,25 @@
+<mat-card class="m-5 p-2 bg-slate-400">
+  <mat-card-header>
+    <mat-card-title>{{ chore.title }}</mat-card-title>
+    <mat-card-subtitle
+      >Cleaning Style: {{ chore.cleaningStyle }}</mat-card-subtitle
+    >
+  </mat-card-header>
+  <img
+    mat-card-image
+    src="{{ chore.imgUrl }}"
+    alt="{{ chore.altText }}"
+    class="m-3 rounded-md"
+  />
+  <mat-card-content>
+    <p class="p-3">{{ chore.content }}</p>
+  </mat-card-content>
+  <mat-card-actions class="flex gap-3">
+    <button mat-fab (click)="deleteChoreHandler()">
+      <mat-icon>delete</mat-icon>
+    </button>
+    <button mat-fab>
+      <mat-icon>edit</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

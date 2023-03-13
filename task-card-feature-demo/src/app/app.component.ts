@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
+
+import { ChoreListComponent } from './chore-list/chore-list.component';
 
 @Component({
   standalone: true,
-  imports: [MatCardModule, MatIconModule, MatButtonModule],
+  imports: [ChoreListComponent],
   selector: 'demo-playground-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
