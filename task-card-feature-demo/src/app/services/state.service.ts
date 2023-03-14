@@ -16,9 +16,12 @@ export class StateService {
     });
   }
 
-  deleteChore(choreIndex: number) {
-    this.apiService.deleteChores().subscribe((response) => {
-      console.log(response);
+  deleteChore(choreId: number) {
+    this.apiService.deleteChores(choreId).subscribe(() => {
+      const updatedChores = this.chores$$.value.filter((chore) => {
+        return chore.id !== choreId;
+      });
+      this.chores$$.next(updatedChores);
     });
   }
 }

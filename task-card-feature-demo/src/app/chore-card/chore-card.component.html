@@ -1,25 +1,70 @@
-<mat-card class="m-5 p-2 bg-slate-400">
-  <mat-card-header>
-    <mat-card-title>{{ choreInput.title }}</mat-card-title>
-    <mat-card-subtitle
-      >Cleaning Style: {{ choreInput.cleaningStyle }}</mat-card-subtitle
-    >
-  </mat-card-header>
-  <img
-    mat-card-image
-    src="{{ choreInput.imgUrl }}"
-    alt="{{ choreInput.altText }}"
-    class="m-3 rounded-md"
-  />
-  <mat-card-content>
-    <p class="p-3">{{ choreInput.content }}</p>
-  </mat-card-content>
-  <mat-card-actions class="flex gap-3">
-    <button mat-fab (click)="emitChore(choreInputIndex)">
-      <mat-icon>delete</mat-icon>
-    </button>
-    <button mat-fab>
-      <mat-icon>edit</mat-icon>
-    </button>
-  </mat-card-actions>
-</mat-card>
+<ng-container *ngIf="!isEditable; else editableCard">
+  <mat-card class="m-5 p-2 bg-slate-400">
+    <mat-card-header>
+      <mat-card-title>{{ chore.title }}</mat-card-title>
+      <mat-card-subtitle
+        >Cleaning Style: {{ chore.cleaningStyle }}</mat-card-subtitle
+      >
+    </mat-card-header>
+    <img
+      mat-card-image
+      src="{{ chore.imgUrl }}"
+      alt="{{ chore.altText }}"
+      class="m-3 rounded-md"
+    />
+    <mat-card-content>
+      <p class="p-3">{{ chore.content }}</p>
+    </mat-card-content>
+    <mat-card-actions class="flex gap-3">
+      <button mat-fab (click)="deleteChoreClicked.emit()">
+        <mat-icon>delete</mat-icon>
+      </button>
+      <button mat-fab>
+        <mat-icon>edit</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</ng-container>
+
+<ng-template #editableCard>
+  <form>
+    <mat-card class="m-5 p-2 !bg-teal-600">
+      <mat-form-field>
+        <mat-label>Chore Title</mat-label>
+        <input matInput placeholder="Ex. Vacuum" />
+      </mat-form-field>
+
+      <mat-radio-group class="mb-3">
+        <mat-label>Cleaning Style</mat-label><br />
+        <mat-radio-button value="task">task</mat-radio-button>
+        <mat-radio-button value="zone">zone</mat-radio-button>
+        <mat-radio-button value="weekend warrior"
+          >weekend warrior</mat-radio-button
+        >
+      </mat-radio-group>
+
+      <mat-form-field>
+        <mat-label>Image URL</mat-label>
+        <input matInput />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Image Description Text</mat-label>
+        <input matInput />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Chore Description</mat-label>
+        <input
+          matInput
+          placeholder="Ex. Vacuum all the floors using cordless vacuum."
+        />
+      </mat-form-field>
+
+      <mat-card-actions class="flex gap-3">
+        <button mat-fab>
+          <mat-icon>save</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+</ng-template>

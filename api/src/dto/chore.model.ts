@@ -1,4 +1,4 @@
-export interface Chore {
+export interface UpdateChoreDto {
   id: number;
   title: string;
   cleaningStyle: 'task' | 'zone' | 'weekend warrior';

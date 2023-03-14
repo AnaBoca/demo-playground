@@ -17,7 +17,7 @@ export class ChoreListComponent {
 
   constructor(private stateService: StateService) {}
 
-  deleteChore(choreIndex: number) {
-    this.stateService.deleteChore(choreIndex);
+  deleteChore(choreId: number) {
+    this.stateService.deleteChore(choreId);
   }
 }

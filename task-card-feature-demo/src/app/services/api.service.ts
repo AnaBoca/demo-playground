@@ -13,10 +13,10 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   getData() {
-    return this.http.get<GetChoresResponse>('/assets/chores.json');
+    return this.http.get<GetChoresResponse>('http://localhost:3333/api');
   }
 
-  deleteChores() {
-    return this.http.delete('/assets/chores.json');
+  deleteChores(choreId: number) {
+    return this.http.delete(`http://localhost:3333/api/${choreId}`);
   }
 }
