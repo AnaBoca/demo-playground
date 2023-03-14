@@ -15,4 +15,10 @@ export class StateService {
       this.chores$$.next(response.chores);
     });
   }
+
+  deleteChore(choreIndex: number) {
+    this.apiService.deleteChores().subscribe((response) => {
+      console.log(response);
+    });
+  }
 }

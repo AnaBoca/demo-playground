@@ -15,4 +15,8 @@ export class ApiService {
   getData() {
     return this.http.get<GetChoresResponse>('/assets/chores.json');
   }
+
+  deleteChores() {
+    return this.http.delete('/assets/chores.json');
+  }
 }

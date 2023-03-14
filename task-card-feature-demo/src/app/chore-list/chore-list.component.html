@@ -1,5 +1,9 @@
 <div class="flex gap-3">
-  <ng-container *ngFor="let chore of chores$ | async">
-    <chore-card [chore]="chore"></chore-card>
+  <ng-container *ngFor="let chore of chores$ | async; let choreIndex = index">
+    <chore-card
+      [choreInputIndex]="choreIndex"
+      [choreInput]="chore"
+      (choreIndexOutput)="deleteChore(choreIndex)"
+    ></chore-card>
   </ng-container>
 </div>

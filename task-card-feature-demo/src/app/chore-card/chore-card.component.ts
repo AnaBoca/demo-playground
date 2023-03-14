@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
@@ -14,9 +14,12 @@ import { Chore } from '../models/chore.model';
   styleUrls: ['./chore-card.component.scss'],
 })
 export class ChoreCardComponent {
-  @Input() chore: Chore;
+  @Input() choreInput: Chore;
+  @Input() choreInputIndex: number;
 
-  deleteChoreHandler() {
-    console.log('clicked');
+  @Output() choreIndexOutput = new EventEmitter<number>();
+
+  emitChore(choreIndex: number) {
+    this.choreIndexOutput.emit(choreIndex);
   }
 }

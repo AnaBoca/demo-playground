@@ -1,21 +1,21 @@
 <mat-card class="m-5 p-2 bg-slate-400">
   <mat-card-header>
-    <mat-card-title>{{ chore.title }}</mat-card-title>
+    <mat-card-title>{{ choreInput.title }}</mat-card-title>
     <mat-card-subtitle
-      >Cleaning Style: {{ chore.cleaningStyle }}</mat-card-subtitle
+      >Cleaning Style: {{ choreInput.cleaningStyle }}</mat-card-subtitle
     >
   </mat-card-header>
   <img
     mat-card-image
-    src="{{ chore.imgUrl }}"
-    alt="{{ chore.altText }}"
+    src="{{ choreInput.imgUrl }}"
+    alt="{{ choreInput.altText }}"
     class="m-3 rounded-md"
   />
   <mat-card-content>
-    <p class="p-3">{{ chore.content }}</p>
+    <p class="p-3">{{ choreInput.content }}</p>
   </mat-card-content>
   <mat-card-actions class="flex gap-3">
-    <button mat-fab (click)="deleteChoreHandler()">
+    <button mat-fab (click)="emitChore(choreInputIndex)">
       <mat-icon>delete</mat-icon>
     </button>
     <button mat-fab>
