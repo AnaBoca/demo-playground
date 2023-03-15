@@ -19,4 +19,8 @@ export class AddDialogComponent {
   addChore(chore: Chore) {
     this.dialogRef.close(chore);
   }
+
+  close() {
+    this.dialogRef.close();
+  }
 }

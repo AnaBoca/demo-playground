@@ -35,6 +35,7 @@ import { Chore } from '@demo/models';
 export class AddEditFormComponent implements OnInit {
   @Input() chore: Chore;
   @Output() saveClicked = new EventEmitter<Chore>();
+  @Output() cancelClicked = new EventEmitter<void>();
   @ViewChild('form') form: NgForm;
 
   model: Chore;

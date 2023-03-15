@@ -47,7 +47,7 @@ export class ChoreListComponent {
     dialogConfig.autoFocus = true;
     dialogConfig.hasBackdrop = true;
     dialogConfig.backdropClass = '';
-    dialogConfig.width = '640px';
+    dialogConfig.width = '540px';
     dialogConfig.height = '';
     dialogConfig.position = {
       top: '50vh',
