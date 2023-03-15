@@ -6,8 +6,6 @@ An Nx workspace where Ana experiments creating and demoing features.
 
 ## TaskCardFeatureDemo
 
-<hr>
-
 ## 💻 Frontend
 
 Run `npm start` for development server. Navigate to [http://localhost:4200/](http://localhost:4200/). The app will automatically reload if you change any of the source files.
@@ -21,3 +19,7 @@ Run `npm start` for development server. Navigate to [http://localhost:4200/](htt
 Run `npm run start:api` for development server. Navigate to [http://localhost:3333/api](http://localhost:3333/api) to see api endpoints.
 
 - Node Framework: NestJS
+
+### App Architecture
+
+![App Architecture Graphic](task-card-feature-demo\src\assets\2023-03-15_GITHUB_TaskCardFeatureDemoGraphic.jpg)
