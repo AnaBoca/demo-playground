@@ -20,6 +20,10 @@ Run `npm run start:api` for development server. Navigate to [http://localhost:33
 
 - Node Framework: NestJS
 
-### App Architecture
+## 📐 App Architecture
+
+<center>
 
 ![App Architecture Graphic](https://github.com/AnaBoca/demo-playground/blob/main/task-card-feature-demo/src/assets/2023-03-15_GITHUB_TaskCardFeatureDemoGraphic.jpg?raw=true)
+
+</center>
