@@ -1,5 +1,5 @@
 import { Controller, Get, Delete, Param, Body, Put } from '@nestjs/common';
-import { UpdateChoreDto } from '../dto/chore.model';
+import { Chore } from '@demo/models';
 
 import { AppService } from './app.service';
 
@@ -18,7 +18,7 @@ export class AppController {
   }
 
   @Put(':id')
-  updateChore(@Param('id') choreId: string, @Body() post: UpdateChoreDto) {
-    this.appService.updateChore(Number(choreId), post);
+  updateChore(@Param('id') choreId: string, @Body() postChore: Chore) {
+    this.appService.updateChore(Number(choreId), postChore);
   }
 }

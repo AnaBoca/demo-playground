@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { Chore } from '../models/chore.model';
+import { Chore } from '@demo/models';
 import { ApiService } from './api.service';
 
 @Injectable({
@@ -22,6 +22,22 @@ export class StateService {
         return chore.id !== choreId;
       });
       this.chores$$.next(updatedChores);
+    });
+  }
+
+  updateChore(choreBody: Chore) {
+    this.apiService.updateChores(choreBody).subscribe(() => {
+      const currentState = this.chores$$.value;
+
+      const updatedState = currentState.map((chore) => {
+        if (chore.id === choreBody.id) {
+          return choreBody;
+        } else {
+          return chore;
+        }
+      });
+
+      this.chores$$.next(updatedState);
     });
   }
 }

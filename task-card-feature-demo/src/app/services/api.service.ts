@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Chore } from '../models/chore.model';
+import { Chore } from '@demo/models';
 
 interface GetChoresResponse {
   chores: Chore[];
@@ -18,5 +18,9 @@ export class ApiService {
 
   deleteChores(choreId: number) {
     return this.http.delete(`http://localhost:3333/api/${choreId}`);
+  }
+
+  updateChores(chore: Chore) {
+    return this.http.put(`http://localhost:3333/api/${chore.id}`, chore);
   }
 }

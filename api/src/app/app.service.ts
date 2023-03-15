@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { UpdateChoreDto } from '../dto/chore.model';
+import { Chore } from '@demo/models';
 
 @Injectable()
 export class AppService {
@@ -32,14 +32,15 @@ export class AppService {
     this.chores = this.chores.filter((chore) => chore.id !== choreId);
   }
 
-  updateChore(choreId: number, postData: UpdateChoreDto) {
-    const foundChore = this.chores.find((chore) => chore.id === choreId);
+  updateChore(choreId: number, postChore: Chore) {
+    const foundChoreIndex = this.chores.findIndex(
+      (chore) => chore.id === choreId
+    );
 
-    foundChore!.id = postData.id;
-    foundChore!.title = postData.title;
-    foundChore!.cleaningStyle = postData.cleaningStyle;
-    foundChore!.content = postData.content;
-    foundChore!.imgUrl = postData.imgUrl;
-    foundChore!.altText = postData.altText;
+    if (foundChoreIndex === -1) {
+      throw new Error(`Could not find a chore with id ${choreId}.`);
+    }
+
+    this.chores[foundChoreIndex] = postChore;
   }
 }

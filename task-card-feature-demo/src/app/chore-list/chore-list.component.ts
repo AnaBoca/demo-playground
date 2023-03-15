@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 
 import { ChoreCardComponent } from '../chore-card/chore-card.component';
 import { StateService } from '../services/state.service';
+import { Chore } from '@demo/models';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'chore-list',
   standalone: true,
   imports: [CommonModule, ChoreCardComponent],
@@ -19,5 +19,9 @@ export class ChoreListComponent {
 
   deleteChore(choreId: number) {
     this.stateService.deleteChore(choreId);
+  }
+
+  updateChore(chore: Chore) {
+    this.stateService.updateChore(chore);
   }
 }

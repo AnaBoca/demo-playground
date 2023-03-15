@@ -1,4 +1,4 @@
-<ng-container *ngIf="!isEditable; else editableCard">
+<ng-container *ngIf="!isEditing; else editableCard">
   <mat-card class="m-5 p-2 bg-slate-400">
     <mat-card-header>
       <mat-card-title>{{ chore.title }}</mat-card-title>
@@ -10,7 +10,7 @@
       mat-card-image
       src="{{ chore.imgUrl }}"
       alt="{{ chore.altText }}"
-      class="m-3 rounded-md"
+      class="m-3 rounded-md h-60"
     />
     <mat-card-content>
       <p class="p-3">{{ chore.content }}</p>
@@ -19,7 +19,7 @@
       <button mat-fab (click)="deleteChoreClicked.emit()">
         <mat-icon>delete</mat-icon>
       </button>
-      <button mat-fab>
+      <button mat-fab (click)="isEditing = true">
         <mat-icon>edit</mat-icon>
       </button>
     </mat-card-actions>
@@ -27,44 +27,8 @@
 </ng-container>
 
 <ng-template #editableCard>
-  <form>
-    <mat-card class="m-5 p-2 !bg-teal-600">
-      <mat-form-field>
-        <mat-label>Chore Title</mat-label>
-        <input matInput placeholder="Ex. Vacuum" />
-      </mat-form-field>
-
-      <mat-radio-group class="mb-3">
-        <mat-label>Cleaning Style</mat-label><br />
-        <mat-radio-button value="task">task</mat-radio-button>
-        <mat-radio-button value="zone">zone</mat-radio-button>
-        <mat-radio-button value="weekend warrior"
-          >weekend warrior</mat-radio-button
-        >
-      </mat-radio-group>
-
-      <mat-form-field>
-        <mat-label>Image URL</mat-label>
-        <input matInput />
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label>Image Description Text</mat-label>
-        <input matInput />
-      </mat-form-field>
-
-      <mat-form-field>
-        <mat-label>Chore Description</mat-label>
-        <input
-          matInput
-          placeholder="Ex. Vacuum all the floors using cordless vacuum."
-        />
-      </mat-form-field>
-
-      <mat-card-actions class="flex gap-3">
-        <button mat-fab>
-          <mat-icon>save</mat-icon>
-        </button>
-      </mat-card-actions>
-    </mat-card>
-  </form>
+  <add-edit-form
+    [chore]="chore"
+    (saveClicked)="updateChoreClicked.emit($event)"
+  ></add-edit-form>
 </ng-template>

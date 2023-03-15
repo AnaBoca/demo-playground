@@ -1,0 +1,42 @@
+<form (ngSubmit)="onSave()" #form="ngForm">
+  <mat-card class="m-5 p-2 !bg-teal-600">
+    <mat-form-field>
+      <mat-label>Chore Title</mat-label>
+      <input [(ngModel)]="model.title" name="title" matInput required />
+    </mat-form-field>
+
+    <mat-radio-group
+      [(ngModel)]="model.cleaningStyle"
+      name="cleaningStyle"
+      class="mb-3"
+      required
+    >
+      <mat-label>Cleaning Style</mat-label><br />
+      <mat-radio-button value="task">task</mat-radio-button>
+      <mat-radio-button value="zone">zone</mat-radio-button>
+      <mat-radio-button value="weekend warrior">
+        weekend warrior
+      </mat-radio-button>
+    </mat-radio-group>
+
+    <mat-form-field>
+      <mat-label>Image URL</mat-label>
+      <input [(ngModel)]="model.imgUrl" name="imageUrl" matInput required />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Image Description Text</mat-label>
+      <input [(ngModel)]="model.altText" name="altText" matInput />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Chore Description</mat-label>
+      <input [(ngModel)]="model.content" name="content" matInput required />
+    </mat-form-field>
+
+    <mat-card-actions class="flex gap-3">
+      <button mat-fab type="submit">
+        <mat-icon>save</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</form>

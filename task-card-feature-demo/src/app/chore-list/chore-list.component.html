@@ -3,6 +3,7 @@
     <chore-card
       [chore]="chore"
       (deleteChoreClicked)="deleteChore(chore.id)"
+      (updateChoreClicked)="updateChore($event)"
     ></chore-card>
   </ng-container>
 </div>

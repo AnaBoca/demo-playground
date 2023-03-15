@@ -17,7 +17,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "demo-playground",
+            
             "style": "kebab-case"
           }
         ]
