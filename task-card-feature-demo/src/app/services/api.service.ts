@@ -23,4 +23,8 @@ export class ApiService {
   updateChores(chore: Chore) {
     return this.http.put(`http://localhost:3333/api/${chore.id}`, chore);
   }
+
+  addChore(chore: Chore) {
+    return this.http.post<string>(`http://localhost:3333/api/`, chore);
+  }
 }

@@ -40,7 +40,18 @@ export class AddEditFormComponent implements OnInit {
   model: Chore;
 
   ngOnInit() {
-    this.model = deepCopy(this.chore);
+    if (this.chore) {
+      this.model = deepCopy(this.chore);
+    } else {
+      this.model = {
+        id: -1,
+        title: '',
+        cleaningStyle: undefined,
+        content: '',
+        imgUrl: '',
+        altText: '',
+      } as unknown as Chore;
+    }
   }
 
   onSave() {

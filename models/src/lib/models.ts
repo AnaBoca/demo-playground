@@ -1,8 +1,10 @@
 export interface Chore {
   id: number;
   title: string;
-  cleaningStyle: 'task' | 'zone' | 'weekend warrior';
+  cleaningStyle: CleaningStyle;
   content: string;
   imgUrl: string;
   altText: string;
 }
+
+export type CleaningStyle = 'task' | 'zone' | 'weekend warrior';

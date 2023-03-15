@@ -15,12 +15,12 @@
     <mat-card-content>
       <p class="p-3">{{ chore.content }}</p>
     </mat-card-content>
-    <mat-card-actions class="flex gap-3">
-      <button mat-fab (click)="deleteChoreClicked.emit()">
-        <mat-icon>delete</mat-icon>
-      </button>
+    <mat-card-actions class="flex justify-end gap-3">
       <button mat-fab (click)="isEditing = true">
         <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-fab (click)="deleteChoreClicked.emit()">
+        <mat-icon>delete</mat-icon>
       </button>
     </mat-card-actions>
   </mat-card>

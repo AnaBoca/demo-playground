@@ -1,12 +1,24 @@
 <form (ngSubmit)="onSave()" #form="ngForm">
-  <mat-card class="m-5 p-2 !bg-teal-600">
+  <mat-card class="m-5 p-2 !bg-sky-700">
     <mat-form-field>
       <mat-label>Chore Title</mat-label>
-      <input [(ngModel)]="model.title" name="title" matInput required />
+      <input
+        [(ngModel)]="model.title"
+        #title="ngModel"
+        name="title"
+        matInput
+        required
+      />
+      <mat-error
+        *ngIf="title.invalid && (title.dirty || title.touched)"
+        class="mb-3"
+        >Title is required.</mat-error
+      >
     </mat-form-field>
 
     <mat-radio-group
       [(ngModel)]="model.cleaningStyle"
+      #cleaningStyle="ngModel"
       name="cleaningStyle"
       class="mb-3"
       required
@@ -18,10 +30,30 @@
         weekend warrior
       </mat-radio-button>
     </mat-radio-group>
+    <mat-error
+      *ngIf="
+        cleaningStyle.invalid && (cleaningStyle.dirty || cleaningStyle.touched)
+      "
+      class="mb-3"
+    >
+      Cleaning Style is required.
+    </mat-error>
 
     <mat-form-field>
       <mat-label>Image URL</mat-label>
-      <input [(ngModel)]="model.imgUrl" name="imageUrl" matInput required />
+      <input
+        [(ngModel)]="model.imgUrl"
+        #imageUrl="ngModel"
+        name="imageUrl"
+        matInput
+        required
+      />
+      <mat-error
+        *ngIf="imageUrl.invalid && (imageUrl.dirty || imageUrl.touched)"
+        class="mb-3"
+      >
+        Image URL is required.</mat-error
+      >
     </mat-form-field>
     <mat-form-field>
       <mat-label>Image Description Text</mat-label>
@@ -30,10 +62,25 @@
 
     <mat-form-field>
       <mat-label>Chore Description</mat-label>
-      <input [(ngModel)]="model.content" name="content" matInput required />
+      <input
+        [(ngModel)]="model.content"
+        #content="ngModel"
+        name="content"
+        matInput
+        required
+      />
+      <mat-error
+        *ngIf="content.invalid && (content.dirty || content.touched)"
+        class="mb-3"
+      >
+        Description is required.</mat-error
+      >
     </mat-form-field>
 
-    <mat-card-actions class="flex gap-3">
+    <mat-card-actions class="flex justify-end gap-3">
+      <button mat-fab>
+        <mat-icon>cancel</mat-icon>
+      </button>
       <button mat-fab type="submit">
         <mat-icon>save</mat-icon>
       </button>

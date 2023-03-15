@@ -18,7 +18,8 @@ export class StateService {
 
   deleteChore(choreId: number) {
     this.apiService.deleteChores(choreId).subscribe(() => {
-      const updatedChores = this.chores$$.value.filter((chore) => {
+      const currentState = this.chores$$.value;
+      const updatedChores = currentState.filter((chore) => {
         return chore.id !== choreId;
       });
       this.chores$$.next(updatedChores);
@@ -36,6 +37,16 @@ export class StateService {
           return chore;
         }
       });
+
+      this.chores$$.next(updatedState);
+    });
+  }
+
+  addChore(chore: Chore) {
+    this.apiService.addChore(chore).subscribe((choreId) => {
+      const currentState = this.chores$$.value;
+      chore.id = +choreId;
+      const updatedState = [...currentState, chore];
 
       this.chores$$.next(updatedState);
     });

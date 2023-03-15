@@ -1,4 +1,11 @@
-<div class="flex gap-3">
+<div class="flex gap-3 m-3 items-center">
+  <button mat-fab (click)="openDialog()">
+    <mat-icon>add_circle</mat-icon>
+  </button>
+  <p>Add Chore</p>
+</div>
+
+<div class="flex gap-3 flex-wrap">
   <ng-container *ngFor="let chore of chores$ | async">
     <chore-card
       [chore]="chore"

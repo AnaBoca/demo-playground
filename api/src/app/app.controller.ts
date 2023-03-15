@@ -1,4 +1,12 @@
-import { Controller, Get, Delete, Param, Body, Put } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Delete,
+  Param,
+  Body,
+  Put,
+  Post,
+} from '@nestjs/common';
 import { Chore } from '@demo/models';
 
 import { AppService } from './app.service';
@@ -18,7 +26,13 @@ export class AppController {
   }
 
   @Put(':id')
-  updateChore(@Param('id') choreId: string, @Body() postChore: Chore) {
-    this.appService.updateChore(Number(choreId), postChore);
+  updateChore(@Param('id') choreId: string, @Body() putChore: Chore) {
+    this.appService.updateChore(Number(choreId), putChore);
+  }
+
+  @Post()
+  addChore(@Body() postChore: Chore) {
+    this.appService.addChore(postChore);
+    return postChore.id;
   }
 }
