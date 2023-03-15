@@ -4,7 +4,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { AddEditFormComponent } from '../add-edit-form/add-edit-form.component';
-
+import { NgOptimizedImage } from '@angular/common';
 import { Chore } from '@demo/models';
 
 @Component({
@@ -16,6 +16,7 @@ import { Chore } from '@demo/models';
     MatIconModule,
     MatButtonModule,
     AddEditFormComponent,
+    NgOptimizedImage,
   ],
   templateUrl: './chore-card.component.html',
   styleUrls: ['./chore-card.component.scss'],

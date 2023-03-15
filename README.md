@@ -24,7 +24,7 @@ Run `npm run start:api` for development server. Navigate to [http://localhost:33
 
 <p align="center">
 
-<img src="https://github.com/AnaBoca/demo-playground/blob/main/task-card-feature-demo/src/assets/2023-03-15_GITHUB_TaskCardFeatureDemoGraphic.jpg?raw=true" width="500px">
+<img src="https://github.com/AnaBoca/demo-playground/blob/main/task-card-feature-demo/src/assets/2023-03-15_GITHUB_TaskCardFeatureDemoGraphic.jpg?raw=true" width="800px">
 
 </p>
 
@@ -34,6 +34,6 @@ Run `npm run start:api` for development server. Navigate to [http://localhost:33
 
 <p align="center">
 
-<img src="https://github.com/AnaBoca/demo-playground/blob/main/task-card-feature-demo/src/assets/2023-03-15_GITHUB_TaskCardFeatureDemo_Create.gif?raw=true" width="500px">
+<img src="https://github.com/AnaBoca/demo-playground/blob/main/task-card-feature-demo/src/assets/2023-03-15_GITHUB_TaskCardFeatureDemo_Create.gif?raw=true" width="800px">
 
 </p>
