@@ -8,8 +8,8 @@ An Nx workspace where Ana experiments creating and demoing features.
 
 ## 📝 Task List
 
-- [x] Stamp out initial task chard feature architecture.
-- [x] Implement backend server.
+- [x] Stamp out initial task card feature architecture.
+- [x] Set up backend server.
 - [x] Create chore functionality.
 - [x] Read chore functionality.
 - [x] Update chore functionality.
@@ -19,7 +19,7 @@ An Nx workspace where Ana experiments creating and demoing features.
 - [ ] Apply interview feedback.
 - [ ] Refine styles for chore-card.
 - [ ] Refine styles for add-edit-form.
-- [ ] Create animation for edit button click to flip chore-card to add-edit-form
+- [ ] Create animation for edit button click to flip chore-card to add-edit-form.
 - [ ] Unit tests.
 - [ ] Component tests.
 - [ ] E2E tests.
