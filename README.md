@@ -17,12 +17,15 @@ An Nx workspace where Ana experiments creating and demoing features.
 - [x] Update README.md.
 - [ ] Get feedback from awesome devs at Eurofins 😉.
 - [ ] Apply interview feedback.
+- [ ] Modify form fields to be more encompassing.
 - [ ] Refine styles for chore-card.
 - [ ] Refine styles for add-edit-form.
 - [ ] Create animation for edit button click to flip chore-card to add-edit-form.
 - [ ] Unit tests.
 - [ ] Component tests.
 - [ ] E2E tests.
+- [ ] Optimize images.
+- [ ] Figure out image solution (S3, some API that generates image automatically, etc.).
 - [ ] Integrate chore feature into [hivehapp](https://github.com/AnaBoca/hivehapp).
 
 ## 💻 Frontend
