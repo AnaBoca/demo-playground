@@ -1,0 +1,29 @@
+{
+  "projectName": "demo-playground",
+  "projectOwner": "Ana Boca",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "AnaBoca",
+      "name": "Ana Boca",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17017510?v=4",
+      "profile": "https://github.com/AnaBoca",
+      "contributions": [
+        "code",
+        "content",
+        "design",
+        "doc",
+        "ideas"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "linkToUsage": false
+}

@@ -14,7 +14,7 @@ An Nx workspace where Ana experiments creating and demoing features.
 - [x] Read chore functionality.
 - [x] Update chore functionality.
 - [x] Delete chore functionality.
-- [x] Documentation
+- [x] Update README.md.
 - [ ] Get feedback from awesome devs at Eurofins 😉.
 - [ ] Apply interview feedback.
 - [ ] Refine styles for chore-card.
@@ -85,4 +85,24 @@ Run `npm run start:api` for development server. Navigate to [http://localhost:33
 
 </p>
 
-### ✨ Sparkles
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/AnaBoca"><img src="https://avatars.githubusercontent.com/u/17017510?v=4?s=100" width="100px;" alt="Ana Boca"/><br /><sub><b>Ana Boca</b></sub></a><br /><a href="https://github.com/Ana Boca/demo-playground/commits?author=AnaBoca" title="Code">💻</a> <a href="#content-AnaBoca" title="Content">🖋</a> <a href="#design-AnaBoca" title="Design">🎨</a> <a href="https://github.com/Ana Boca/demo-playground/commits?author=AnaBoca" title="Documentation">📖</a> <a href="#ideas-AnaBoca" title="Ideas, Planning, & Feedback">🤔</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
