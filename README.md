@@ -37,7 +37,7 @@ Run `npm start` for development server. Navigate to [http://localhost:4200/](htt
 
 ## 🖧 Backend
 
-Run `npm run start:api` for development server. Navigate to [http://localhost:3333/api](http://localhost:3333/api) to see api endpoints.
+Run `npm run start:api` for development server. Navigate to [http://localhost:3333/api](http://localhost:3333/api) to see API endpoints.
 
 | Technologies                                                                                                          |
 | --------------------------------------------------------------------------------------------------------------------- |
