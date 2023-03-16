@@ -61,3 +61,22 @@ Run `npm run start:api` for development server. Navigate to [http://localhost:33
 <img src="https://github.com/AnaBoca/demo-playground/blob/main/task-card-feature-demo/src/assets/2023-03-15_GITHUB_TaskCardFeatureDemo_Delete.gif?raw=true" width="800px">
 
 </p>
+
+## 📝 TODO
+
+- [x] Stamp out initial task chard feature architecture.
+- [x] Implement backend server.
+- [x] Create chore functionality.
+- [x] Read chore functionality.
+- [x] Update chore functionality.
+- [x] Delete chore functionality.
+- [x] Documentation
+- [ ] Get feedback from awesome devs at Eurofins 😉.
+- [ ] Apply interview feedback.
+- [ ] Refine styles for chore-card.
+- [ ] Refine styles for add-edit-form.
+- [ ] Create animation for edit button click to flip chore-card to add-edit-form
+- [ ] Unit tests.
+- [ ] Component tests.
+- [ ] E2E tests.
+- [ ] Integrate chore feature into [hivehapp](https://github.com/AnaBoca/hivehapp).
